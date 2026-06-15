@@ -9,6 +9,7 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /search
 Disallow: /search?
+Disallow: /go/
 Disallow: /*?affiliateCode=
 Disallow: /*?utm_
 Disallow: /*?ref=
