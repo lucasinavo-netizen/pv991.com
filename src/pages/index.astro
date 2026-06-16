@@ -180,32 +180,6 @@ const organizationSchema = {
   }
 };
 
-// LocalBusiness Schema for local SEO
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "PV991",
-  "image": `${siteUrl}/images/favicon.png`,
-  "description": description,
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "MM",
-    "addressRegion": "Yangon"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "16.8661",
-    "longitude": "96.1951"
-  },
-  "url": siteUrl,
-  "priceRange": "$$",
-  "openingHours": "Mo-Su 00:00-23:59",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Myanmar"
-  }
-};
-
 // FAQ Schema for rich snippets
 const faqSchema = {
   "@context": "https://schema.org",
@@ -358,7 +332,6 @@ const faqSchema = {
   <!-- Schema.org structured data -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaOrg)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(localBusinessSchema)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   
   <!-- Preconnect to external resources -->
