@@ -20,7 +20,7 @@ Disallow: /*?source=
 # Disallow: /private/
 
 # Sitemap 位置
-Sitemap: https://pv991.com/sitemap.xml
+Sitemap: https://www.pv991.com/sitemap.xml
 
 # 允許主要搜索引擎
 User-agent: Googlebot
