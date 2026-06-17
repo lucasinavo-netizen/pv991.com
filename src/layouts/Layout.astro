@@ -123,9 +123,50 @@ const ogImage = "/images/og-image.jpg";
       color: #fff;
       line-height: 1.6;
     }
+    .site-nav {
+      background: #14172a;
+      border-bottom: 1px solid #2a2f4a;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .site-nav a {
+      color: #b4b8c9;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .site-nav a:hover { color: #fff; }
+    .site-nav a.cta {
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #1a1a1a;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+    .site-nav a.cta:hover { color: #1a1a1a; opacity: 0.92; }
+    @media (max-width: 480px) {
+      .site-nav { gap: 14px; font-size: 13px; padding: 8px 10px; }
+      .site-nav a.cta { padding: 6px 12px; }
+    }
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/">ပင်မ</a>
+    <a href="/guide">လမ်းညွှန်</a>
+    <a href="/blog/">ဆောင်းပါးများ</a>
+    <a href="/platforms/">Platforms</a>
+    <a href="/go/p" class="cta" target="_blank" rel="nofollow noopener sponsored">🎰 ကစားရန်</a>
+  </nav>
   <slot />
 </body>
 </html>
