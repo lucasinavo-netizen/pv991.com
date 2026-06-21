@@ -419,11 +419,11 @@ const faqSchema = {
             const platform = platforms[platformIndex];
             return (
             <article class="game-card">
-              <a 
-                href={platform?.url || '#'} 
-                class="game-link" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href={platform?.url || '#'}
+                class="game-link"
+                target="_blank"
+                rel="nofollow noopener noreferrer sponsored"
                 aria-label={`${game.name} - ${game.provider} - 點擊進入 ${platform?.name || '遊戲平台'}`}
               >
               <div class="game-image">
