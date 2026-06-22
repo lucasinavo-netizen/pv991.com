@@ -1,0 +1,65 @@
+# SEO Profile — single source of truth for this site.
+# Every employee agent MUST read this before acting on the site.
+# Update `current_state` + `last_full_audit` after every audit.
+
+url: pv991.com
+url_canonical: https://pv991.com/
+brand_name: PV991
+
+# Infrastructure
+framework: astro
+hosting: vercel
+github_repo: lucasinavo-netizen/pv991.com
+
+
+# Analytics
+gsc:
+  property: https://pv991.com/
+  verified: true
+  permission: siteFullUser
+  service_account_owner: true
+
+ga4:
+  property_id: "518378406"
+  measurement_id: G-724BTJFFGZ
+  service_account_viewer: true
+
+# Brand / Positioning
+target_market: Myanmar (MM)
+target_language: my-MM
+target_keywords:
+  primary: ["pv991", "casino myanmar"]
+  secondary: []
+position: "PV991 — Myanmar gambling network"
+
+# Affiliate
+affiliate_cloak_path: /go/p
+affiliate_destination: https://www.mm38aa.com/m/home?affiliateCode=lu0001
+
+# Current State (auto-updated by sk-tech / sk-content)
+current_state:
+  body_words: 20582
+  h2_count: 4
+  h3_count: 25
+  sitemap_urls: 45
+  indexed_pages_90d: 1
+  clicks_90d: 53
+  impressions_90d: 357
+  last_full_audit: 2026-06-17
+  last_content_update: 2026-06-18
+  last_visual_screenshot: /tmp/all-sites-visual/pv991.com.png
+
+# Known Issues
+known_issues: []
+
+# Confirmed Facts
+confirmed_facts:
+  pbn_inline_strategy: nofollow  # All cross-network <a href> require rel=nofollow noopener noreferrer
+
+# Pending Decisions
+pending_decisions: []
+
+# Site-Specific Notes
+notes:
+  - "www canonical (https://www.pv991.com). 39 blog posts use layout: frontmatter syntax which Astro ignores for .astro files — pages render without Layout (pre-existing bug)."
+  - "Partner platforms: Yes8, Ygn9, Pya777, Mmk99, Kbz999, Mmk123, Mmk8 (confirmed real by user 2026-06-18)"
