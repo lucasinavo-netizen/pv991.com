@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/go/p",
-      "destination": "https://www.mm38aa.com/m/home?affiliateCode=lu0001",
-      "permanent": false
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -27,6 +20,16 @@
           "value": "geolocation=(), microphone=(), camera=()"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/go/p",
+      "destination": "/go/p.html"
+    },
+    {
+      "source": "/go/p2",
+      "destination": "/go/p2.html"
     }
   ]
 }
