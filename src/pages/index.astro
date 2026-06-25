@@ -7,6 +7,7 @@ const ogImage = "/images/og-image.jpg"; // 建議尺寸: 1200x630px
 
 const platforms = [
   {
+    slug: "yes8",
     name: "Yes8",
     code: "M18-Yes8",
     affiliate: "seom1802",
@@ -15,6 +16,7 @@ const platforms = [
     img: "yes8.jpg"
   },
   {
+    slug: "ygn9",
     name: "Ygn9",
     code: "M19-Ygn9",
     affiliate: "seom1902",
@@ -23,6 +25,7 @@ const platforms = [
     img: "ygn9.jpg"
   },
   {
+    slug: "pya777",
     name: "Pya777",
     code: "M20-Pya777",
     affiliate: "seom2002",
@@ -31,6 +34,7 @@ const platforms = [
     img: "pya777.jpg"
   },
   {
+    slug: "mmk99",
     name: "Mmk99",
     code: "M21-Mmk99",
     affiliate: "seom2102",
@@ -39,6 +43,7 @@ const platforms = [
     img: "mmk99.jpg"
   },
   {
+    slug: "kbz999",
     name: "Kbz999",
     code: "M22-Kbz999",
     affiliate: "seom2202",
@@ -47,6 +52,7 @@ const platforms = [
     img: "kbz999.jpg"
   },
   {
+    slug: "mmk123",
     name: "Mmk123",
     code: "M23-Mmk123",
     affiliate: "seom2302",
@@ -55,6 +61,7 @@ const platforms = [
     img: "mmk123.jpg"
   },
   {
+    slug: "mmk8",
     name: "Mmk8",
     code: "M24-Mmk8",
     affiliate: "seom2401",
@@ -63,6 +70,7 @@ const platforms = [
     img: "mmk8.jpg"
   },
   {
+    slug: "shwe-casino-99",
     name: "Shwe Casino 99",
     code: "M25-ShweCasino99",
     affiliate: "seom2501",
@@ -71,6 +79,7 @@ const platforms = [
     img: "shwe-casino-99.jpg"
   },
   {
+    slug: "yz09",
     name: "YZ09",
     code: "M26-YZ09",
     affiliate: "seom2601",
@@ -458,10 +467,12 @@ const faqSchema = {
         <div class="platforms-grid">
           {platforms.map((platform, index) => (
             <a 
-              href={`/platforms/${platform.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`} 
+              href={platform.slug === "yes8" || platform.slug === "ygn9" ? `/platforms/${platform.slug}` : platform.url}
               class="platform-btn" 
               style={`animation-delay: ${index * 0.1}s`}
-              aria-label={`${platform.name} - ${platform.description} - အသေးစိတ်ကြည့်ရှုရန်`}
+              target={platform.slug === "yes8" || platform.slug === "ygn9" ? undefined : "_blank"}
+              rel={platform.slug === "yes8" || platform.slug === "ygn9" ? undefined : "sponsored nofollow noopener noreferrer"}
+              aria-label={`${platform.name} - ${platform.description}`}
             >
               <img 
                 src={`/images/platforms/${platform.img}`} 

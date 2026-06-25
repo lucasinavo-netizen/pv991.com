@@ -28,7 +28,7 @@ const platforms = [
     <section class="grid" aria-label="platform list">
       {platforms.map((p) => (
         <article class="card">
-          <a class="card-link" href={`/platforms/${p.slug}`} aria-label={`${p.name} platform details`}>
+          <a class="card-link" href={p.slug === "yes8" || p.slug === "ygn9" ? `/platforms/${p.slug}` : p.url} target={p.slug === "yes8" || p.slug === "ygn9" ? undefined : "_blank"} rel={p.slug === "yes8" || p.slug === "ygn9" ? undefined : "sponsored nofollow noopener noreferrer"} aria-label={`${p.name} platform details`}>
             <img src={p.img} alt={`${p.name} platform`} loading="lazy" />
             <div class="card-body">
               <h2>{p.name}</h2>
