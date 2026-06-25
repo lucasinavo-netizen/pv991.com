@@ -33,7 +33,8 @@ const renderUrlEntry = (
   const hreflangTags = hreflang
     ? `
     <xhtml:link rel="alternate" hreflang="my-MM" href="${siteUrl}${path}" />
-    <xhtml:link rel="alternate" hreflang="my" href="${siteUrl}${path}" />`
+    <xhtml:link rel="alternate" hreflang="my" href="${siteUrl}${path}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}${path}" />`
     : '';
 
   return `  <url>
