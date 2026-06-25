@@ -25,11 +25,11 @@
   "rewrites": [
     {
       "source": "/go/p",
-      "destination": "/api/go?to=rr95"
+      "destination": "/api/go"
     },
     {
       "source": "/go/p2",
-      "destination": "/api/go?to=mm38"
+      "destination": "/api/go"
     }
   ]
 }
