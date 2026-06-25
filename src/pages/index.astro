@@ -181,11 +181,7 @@ const organizationSchema = {
   }
 };
 
-// FAQ Schema for rich snippets
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+const visibleFaqContent = [
     {
       "@type": "Question",
       "name": "မြန်မာတွင် အွန်လိုင်း ကာစီနို ကစားခြင်း တရားဝင်ပါသလား?",
@@ -282,8 +278,8 @@ const faqSchema = {
         "text": "အချို့ နိုင်ငံတကာ ကာစီနိုများတွင် Cryptocurrency ကို လက်ခံပါသည်။ အကျိုးကျေးဇူးများမှာ: (1) အမည်မသိ ငွေသွင်း/ထုတ်မှု၊ (2) မြန်ဆန်သော အရောက်အချိန် (အထူးသဖြင့် Bitcoin)၊ (3) အခကြေးငွေ နည်းပါးခြင်း၊ (4) နိုင်ငံတကာ အလွယ်တကူ သုံးစွဲနိုင်ခြင်း။ သတိပေးရမည့် အချက်များမှာ: (1) Cryptocurrency စျေးနှုန်း တက်ကျမှု၊ (2) အချို့ ကာစီနိုများတွင် Crypto ဖြင့် ငွေထုတ်ယူချိန် နည်းနည်း ကြာနိုင်သည်၊ (3) Tax ကိစ္စများ သတိပြုရမည်။ မြန်မာတွင် Crypto ကို ထောက်ပံ့သော ကာစီနို အများအပြား ရှိပါသည်။"
       }
     }
-  ]
-};
+];
+void visibleFaqContent;
 ---
 
 <!DOCTYPE html>
@@ -336,7 +332,6 @@ const faqSchema = {
   <!-- Schema.org structured data -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaOrg)} />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   
   <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
