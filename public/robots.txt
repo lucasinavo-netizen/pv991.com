@@ -25,24 +25,31 @@ Sitemap: https://www.pv991.com/sitemap.xml
 # 允許主要搜索引擎
 User-agent: Googlebot
 Allow: /
+Disallow: /go/
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow: /go/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /go/
 
 User-agent: Slurp
 Allow: /
+Disallow: /go/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /go/
 
 User-agent: Baiduspider
 Allow: /
+Disallow: /go/
 
 User-agent: Yandex
 Allow: /
 
 # 爬取延遲（可選，單位：秒）
 Crawl-delay: 1
+Disallow: /go/
