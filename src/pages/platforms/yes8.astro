@@ -7,106 +7,224 @@ const platform = {
   slug: "yes8",
   name: "Yes8",
   url: "/go/p",
-  description: "Yes8 အွန်လိုင်းကာစီနို - လုံခြုံပြီး ယုံကြဲစိတ်ချရသော ဂိမ်းများ",
-  highlights: [
-    "Slots / Live Casino / Table Games အများကြီး",
-    "KBZ Pay / Wave Money စသည့် MMK ငွေသွင်းထုတ် နည်းလမ်းများ (platform အလိုက် ကွာနိုင်)",
-    "Mobile-first UI — ဖုန်းနဲ့ကစားရ လွယ်ကူ",
-    "Bonus/Promotion ရှိနိုင် (Turnover စည်းမျဉ်းကို ကြိုဖတ်ပါ)"
-  ]
 };
 
-const title = `${platform.name} ကာစီနို လမ်းညွှန် | PV991`;
-const description = `${platform.name} ကို ဘယ်လို စတင်ကစားမလဲ—စာရင်းဖွင့်/OTP, KBZ/Wave ငွေသွင်းထုတ်, Bonus စည်းမျဉ်းဖတ်နည်း, လုံခြုံရေး checklist ကို Unicode မြန်မာစာဖြင့် ရှင်းပြထားသည်။`;
+const title = "Yes8 Login, Slot & APK Guide Myanmar | PV991";
+const description = "Yes8 Myanmar guide for players comparing login pages, slot games, APK safety, casino access, payment checks, and bonus rules before using any Yes8 link.";
+const keywords = "yes8, yes8 slot, yes8 login, yes8 casino, yes8 apk, Yes8 Myanmar";
+
+const ahrefsEvidence = [
+  "Ahrefs Myanmar keyword ideas: yes8 ~3.0K, yes8 slot ~250, yes8 login ~200, yes8 casino ~100, yes8 apk ~100.",
+  "Ahrefs SERP shows Google rewards official entrance, login/activity pages, social proof pages, and one Yes8 review page rather than generic casino articles.",
+  "GSC shows PV991 has almost no Yes8 traffic yet, so this page should target the intent directly instead of relying on the homepage."
+];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} keywords={keywords}>
   <main class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
       <a href="/">ပင်မ</a> <span>›</span>
-      <a href="/platforms">ပလက်ဖောင်းများ</a> <span>›</span>
+      <a href="/platforms/">ပလက်ဖောင်းများ</a> <span>›</span>
       <span>{platform.name}</span>
     </nav>
 
     <header class="hero">
-      <h1>{platform.name} အွန်လိုင်းကာစီနို (Myanmar Guide)</h1>
-      <p>{platform.description}</p>
+      <p class="eyebrow">PV991 platform check</p>
+      <h1>Yes8 Login, Slot နှင့် APK လမ်းညွှန်</h1>
+      <p>
+        Yes8 ကို ရှာတဲ့သူအများစုက casino အကြောင်းဖတ်ချင်တာထက်
+        login ဝင်လို့ရမလား၊ slot game တွေရှိလား၊ APK link လုံခြုံလား၊
+        bonus/withdraw rule တွေရှင်းလားဆိုတာကို မြန်မြန်စစ်ချင်ကြပါတယ်။
+        ဒီစာမျက်နှာက Yes8 Myanmar intent ကို အဲ့ဒီအတိုင်း တိုက်ရိုက်ဖြေထားတာပါ။
+      </p>
       <div class="cta-row">
-        <a class="cta primary" href={platform.url} target="_blank" rel="sponsored nofollow noopener noreferrer">Yes8 ကို ယခုပဲ စတင်ကစားမည် ↗</a>
-        <a class="cta secondary" href="/blog/2026-01-10-slot-games">Slot Games လမ်းညွှန် →</a>
+        <a class="cta primary" href={platform.url} target="_blank" rel="sponsored nofollow noopener noreferrer">Yes8 ကို စစ်ပြီး ဝင်မည် ↗</a>
+        <a class="cta secondary" href="/platforms/">ပလက်ဖောင်းများ နှိုင်းယှဉ်ရန်</a>
       </div>
     </header>
 
-    <section>
-      <h2>အမြန်ကြည့် (Highlights)</h2>
-      <ul>
-        {platform.highlights.map((h) => <li>{h}</li>)}
+    <section class="intent-card">
+      <h2>Google က Yes8 အတွက် ဘာမျိုးစာမျက်နှာကို ပြနေသလဲ?</h2>
+      <p>
+        Ahrefs SERP ထဲမှာ Yes8 အတွက် အပေါ်ဆုံးရလဒ်တွေက official entrance,
+        mobile activity page, login page, social profile, review page တို့ဖြစ်ပါတယ်။
+        ဒါကြောင့် PV991 မှာလည်း "Yes8 ကာစီနိုကောင်းတယ်" လို့ပဲ ရေးတာမလုံလောက်ပါဘူး။
+        အသုံးပြုသူက link, login, app, slot, payment, risk ကို တစ်နေရာတည်းမှာ
+        စစ်နိုင်တဲ့ guide ပုံစံဖြစ်ရပါမယ်။
+      </p>
+      <ul class="evidence-list">
+        {ahrefsEvidence.map((item) => <li>{item}</li>)}
       </ul>
     </section>
 
     <section>
-      <h2>Yes8 ကို ဘယ်လို စတင်မလဲ (အဆင့်လိုက်)</h2>
+      <h2>Yes8 အမြန်စစ်ရန် Checklist</h2>
+      <div class="check-grid">
+        <article>
+          <h3>Login link</h3>
+          <p>Domain spelling, HTTPS, mobile page loading, redirect chain တို့ကို စစ်ပါ။ Unknown short link သို့မဟုတ် social comment ထဲက link ကို မနှိပ်ပါနှင့်။</p>
+        </article>
+        <article>
+          <h3>Slot games</h3>
+          <p>Yes8 slot ရှာသူတွေက game list, provider, RTP, bonus allowed game စတာတွေကို သိချင်ကြပါတယ်။ Bonus မယူမီ slot contribution rule ကို ဖတ်ပါ။</p>
+        </article>
+        <article>
+          <h3>APK safety</h3>
+          <p>Yes8 APK ကို third-party download site မှ မယူပါနှင့်။ Android install လုပ်မယ်ဆိုရင် app permission, update source, account password သိမ်းဆည်းမှုကို သတိထားပါ။</p>
+        </article>
+        <article>
+          <h3>Payment</h3>
+          <p>KBZ Pay, Wave Money, bank transfer စသည့် payment option တွေက account level အလိုက်ကွာနိုင်ပါတယ်။ Slip/TxID ကို သိမ်းထားပါ။</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Yes8 Login ဝင်မရရင် စစ်ရမည့်အချက်များ</h2>
       <ol>
-        <li>တရားဝင်လင့်ကို သေချာစစ်ပြီး ဝင်ရောက်ပါ (<code>https://</code>)</li>
-        <li>Register လုပ်ပြီး ဖုန်းနံပါတ်/စကားဝှက် ထည့်ပါ</li>
-        <li>OTP ကို အချိန်မီ ထည့်ပြီး Account ကို အတည်ပြုပါ</li>
-        <li>KBZ Pay / Wave Money / Bank Transfer ထဲက သင့်အဆင်ပြေရာနည်းနဲ့ Deposit လုပ်ပါ</li>
-        <li>Bonus Claim မလုပ်မီ Turnover/Allowed Games/Max Bet Rule ကို ကြိုဖတ်ပါ</li>
+        <li>Browser cache ကို clear လုပ်ပြီး mobile data / Wi-Fi နှစ်မျိုးလုံးနဲ့ စမ်းပါ။</li>
+        <li>Login page URL မှာ <code>https://</code> ပါမပါ၊ spelling တူမတူ စစ်ပါ။</li>
+        <li>OTP မရရင် phone number format, SMS block, account region ကို support ထံပြပါ။</li>
+        <li>Password reset link သုံးတဲ့အခါ screenshot မပို့ခင် personal code ကို ဖျောက်ပါ။</li>
+        <li>Deposit ပြီးမှ login မရတော့ရင် TxID, time, account ID ကို သီးသန့်သိမ်းထားပါ။</li>
       </ol>
     </section>
 
     <section>
-      <h2>လုံခြုံရေး Checklist (Scam ရှောင်ရန်)</h2>
+      <h2>Yes8 Slot / Casino ကို ဘယ်လိုနှိုင်းယှဉ်ရမလဲ?</h2>
+      <p>
+        Yes8 slot, Yes8 casino, Yes8 apk ဆိုတဲ့ query တွေက commercial intent ပါ။
+        ဒါပေမယ့် Google က spammy bonus စာမျက်နှာထက် အသုံးပြုသူအတွက် စစ်ရန်အချက်
+        ပါတဲ့ page ကို ပိုကြိုက်ပါတယ်။ PV991 မှာ Yes8 ကို အောက်ကအချက်တွေနဲ့
+        တိုင်းတာပါ။
+      </p>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>စစ်ရန်အချက်</th>
+            <th>ဘာကြောင့်အရေးကြီးလဲ</th>
+            <th>ကစားမီလုပ်ရန်</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Slot provider</td>
+            <td>Game quality, RTP, bonus contribution က provider အလိုက်ကွာနိုင်သည်</td>
+            <td>Provider list နှင့် RTP note ကို ကြည့်ပါ</td>
+          </tr>
+          <tr>
+            <td>Bonus turnover</td>
+            <td>Withdraw မရခြင်းအများစုက turnover rule မဖတ်ခြင်းကြောင့်ဖြစ်သည်</td>
+            <td>Max bet, allowed games, expiry date ကို မှတ်ပါ</td>
+          </tr>
+          <tr>
+            <td>APK permission</td>
+            <td>အမည်မသိ APK သည် account/security risk ဖြစ်နိုင်သည်</td>
+            <td>Official source မဟုတ်ရင် install မလုပ်ပါနှင့်</td>
+          </tr>
+          <tr>
+            <td>Payment proof</td>
+            <td>Deposit delay ဖြစ်တဲ့အခါ support စစ်ရန်လိုသည်</td>
+            <td>Slip, TxID, amount, time ကို သိမ်းပါ</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Yes8 APK ကို Download မလုပ်မီ</h2>
+      <p>
+        "yes8 apk" ရှာသူတွေက app install link ကို တိုက်ရိုက်လိုချင်ကြပေမယ့်
+        SEO အနေနဲ့ အန္တရာယ်ကင်းတဲ့ စာမျက်နှာဖြစ်ဖို့ APK file ကို ကိုယ်တိုင် host
+        မလုပ်သင့်ပါ။ အဲဒီအစား official account page ထဲက app link ကိုပဲစစ်စေပြီး
+        user ကို permission checklist ပေးရပါမယ်။
+      </p>
       <ul>
-        <li>OTP/Password ကို မည်သူ့ကိုမှ မမျှဝေပါနှင့်</li>
-        <li>Third‑party APK/Link မသုံးပါနှင့်</li>
-        <li>Deposit Slip/TxID ကို သိမ်းထားပါ (မတက်လျှင် Support အတွက်)</li>
-        <li>Public Wi‑Fi ပေါ်မှာ Login မဝင်ပါနှင့်</li>
+        <li>APK ကို install လုပ်ခိုင်းသော Telegram/Facebook comment link မယုံပါနှင့်။</li>
+        <li>App update ခိုင်းတိုင်း password/OTP မပေးပါနှင့်။</li>
+        <li>Login မဝင်ခင် domain နှင့် app name တူမတူ စစ်ပါ။</li>
+        <li>ပထမဆုံး deposit ကို အနည်းဆုံးပမာဏနဲ့ စမ်းပြီး TxID သိမ်းပါ။</li>
       </ul>
     </section>
 
     <section class="faq-section">
-      <h2>常見問題 (FAQ)</h2>
+      <h2>Yes8 FAQ</h2>
       <div class="faq-list">
-        <div class="faq-item">
-          <h3>Yes8 မှာ KBZ/Wave Deposit မတက်ရင်?</h3>
-          <p>Slip Screenshot + TxID + လွှဲချိန် ကို LiveChat ထဲပေးပါ။ ဘဏ်စနစ်ကြောင့် 15-30 မိနစ် စောင့်ရနိုင်ပါတယ်။</p>
-        </div>
-        <div class="faq-item">
-          <h3>Bonus Claim လုပ်ပြီး Withdraw မရတာ ဘာကြောင့်?</h3>
-          <p>Turnover (Wagering x) မပြည့်ခြင်း၊ Allowed Games ကန့်သတ်ခြင်း၊ Max Bet Rule ချိုးဖောက်ခြင်းကြောင့် ဖြစ်နိုင်ပါတယ်။ Terms ကို ကြိုဖတ်ပါ။</p>
-        </div>
-        <div class="faq-item">
-          <h3>Yes8 link ကို ဘယ်လိုသေချာစစ်မလဲ?</h3>
-          <p>Domain ကို တိတိကျကျ စစ်ပြီး <code>https://</code> ပါမပါကြည့်ပါ။ Unknown link/redirect များကို မနှိပ်ပါနှင့်။</p>
-        </div>
+        <article class="faq-item">
+          <h3>Yes8 login page ဘာကြောင့် မဖွင့်တာလဲ?</h3>
+          <p>Domain mirror ပြောင်းခြင်း၊ network block, cache issue, login maintenance တို့ကြောင့် ဖြစ်နိုင်ပါတယ်။ Official link ကိုစစ်ပြီး mobile data နဲ့တစ်ခါ စမ်းပါ။</p>
+        </article>
+        <article class="faq-item">
+          <h3>Yes8 slot bonus ကို ဘယ်လိုဖတ်ရမလဲ?</h3>
+          <p>Turnover x, allowed games, max bet, bonus expiry, withdrawal cap ကို အရင်ဖတ်ပါ။ Slot အားလုံး bonus turnover ကို 100% မတွက်နိုင်ပါ။</p>
+        </article>
+        <article class="faq-item">
+          <h3>Yes8 APK ကို PV991 က host လုပ်ထားလား?</h3>
+          <p>မလုပ်ထားပါ။ လုံခြုံရေးအတွက် APK file ကို third-party မှာမဟုတ်ဘဲ official source ထဲက link ကိုသာ စစ်ရန် အကြံပြုပါတယ်။</p>
+        </article>
       </div>
     </section>
   </main>
 
   <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": `${platform.name} Casino`,
-    "description": description,
-    "brand": { "@type": "Brand", "name": platform.name },
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MMK", "availability": "https://schema.org/InStock", "url": platform.url },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `${siteUrl}/platforms/${platform.slug}` }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/platforms/${platform.slug}`,
+        "url": `${siteUrl}/platforms/${platform.slug}`,
+        "name": title,
+        "description": description,
+        "inLanguage": "my-MM",
+        "about": [
+          { "@type": "Thing", "name": "Yes8 login" },
+          { "@type": "Thing", "name": "Yes8 slot" },
+          { "@type": "Thing", "name": "Yes8 APK" }
+        ],
+        "dateModified": "2026-06-26"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "PV991", "item": siteUrl },
+          { "@type": "ListItem", "position": 2, "name": "Platforms", "item": `${siteUrl}/platforms/` },
+          { "@type": "ListItem", "position": 3, "name": "Yes8", "item": `${siteUrl}/platforms/${platform.slug}` }
+        ]
+      }
+    ]
   })} />
 </Layout>
 
 <style>
-  .container { max-width: 920px; margin: 0 auto; padding: 2rem 1.25rem; }
+  .container { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
   .breadcrumb { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; }
   .breadcrumb a { color: inherit; }
   .hero { margin-bottom: 2rem; }
-  .hero h1 { font-size: 2.1rem; margin: 0 0 0.75rem 0; }
-  .hero p { margin: 0 0 1rem 0; line-height: 1.7; opacity: 0.9; }
-  .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-  .cta { display: inline-block; padding: 0.85rem 1.1rem; border-radius: 12px; text-decoration: none; font-weight: 800; }
+  .eyebrow { color: #ffc107; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0; }
+  .hero h1 { font-size: clamp(2rem, 4vw, 3.1rem); margin: 0 0 0.75rem; line-height: 1.25; }
+  .hero p, section p { line-height: 1.85; opacity: 0.94; }
+  .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.1rem; }
+  .cta { display: inline-block; padding: 0.85rem 1.1rem; border-radius: 10px; text-decoration: none; font-weight: 800; }
   .primary { background: linear-gradient(135deg,#ff3b5c,#ff6b00); color: #fff; }
   .secondary { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; }
-  h2 { margin: 2rem 0 1rem 0; }
-  ul, ol { line-height: 1.9; }
+  section { margin-top: 2.1rem; }
+  h2 { margin: 0 0 1rem; font-size: 1.45rem; }
+  h3 { margin: 0 0 0.5rem; }
+  ul, ol { line-height: 1.9; padding-left: 1.25rem; }
   code { background: rgba(255,255,255,0.08); padding: 0.2rem 0.4rem; border-radius: 6px; }
+  .intent-card, .faq-item, .check-grid article {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.1rem;
+  }
+  .evidence-list { margin-top: 0.75rem; }
+  .check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
+  .compare-table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 10px; }
+  .compare-table th, .compare-table td { border: 1px solid rgba(255,255,255,0.12); padding: 0.85rem; vertical-align: top; line-height: 1.7; }
+  .compare-table th { background: rgba(255,255,255,0.08); text-align: left; }
+  .faq-list { display: grid; gap: 1rem; }
+  @media (max-width: 640px) {
+    .compare-table { display: block; overflow-x: auto; }
+  }
 </style>

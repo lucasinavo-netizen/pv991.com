@@ -47,8 +47,8 @@ const platforms = [
     name: "Kbz999",
     code: "M22-Kbz999",
     affiliate: "seom2202",
-    url: "/go/p",
-    description: "Kbz999 အွန်လိုင်းကာစီနို - ဘောနပ်စများစွာ",
+    url: "/platforms/kbz999",
+    description: "Kbz999 slot download Android နှင့် APK safety လမ်းညွှန်",
     img: "kbz999.jpg"
   },
   {
@@ -88,6 +88,11 @@ const platforms = [
     img: "yz09.jpg"
   }
 ];
+
+type Platform = (typeof platforms)[number];
+const internalPlatformSlugs = ["yes8", "ygn9", "kbz999"];
+const isInternalPlatform = (slug: string) => internalPlatformSlugs.includes(slug);
+const platformHref = (platform: Platform) => isInternalPlatform(platform.slug) ? `/platforms/${platform.slug}` : platform.url;
 
 const games = [
   { name: "Rich Mahjong", badge: "16000x", provider: "Royal Slot Gaming", img: "rich-mahjong.jpg" },
@@ -427,10 +432,10 @@ void visibleFaqContent;
             return (
             <article class="game-card">
               <a
-                href={platform?.url || '#'}
+                href={platform ? platformHref(platform) : '#'}
                 class="game-link"
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
+                target={platform && isInternalPlatform(platform.slug) ? undefined : "_blank"}
+                rel={platform && isInternalPlatform(platform.slug) ? undefined : "nofollow noopener noreferrer sponsored"}
                 aria-label={`${game.name} - ${game.provider} - 點擊進入 ${platform?.name || '遊戲平台'}`}
               >
               <div class="game-image">
@@ -465,11 +470,11 @@ void visibleFaqContent;
         <div class="platforms-grid">
           {platforms.map((platform, index) => (
             <a 
-              href={platform.slug === "yes8" || platform.slug === "ygn9" ? `/platforms/${platform.slug}` : platform.url}
+              href={platformHref(platform)}
               class="platform-btn" 
               style={`animation-delay: ${index * 0.1}s`}
-              target={platform.slug === "yes8" || platform.slug === "ygn9" ? undefined : "_blank"}
-              rel={platform.slug === "yes8" || platform.slug === "ygn9" ? undefined : "sponsored nofollow noopener noreferrer"}
+              target={isInternalPlatform(platform.slug) ? undefined : "_blank"}
+              rel={isInternalPlatform(platform.slug) ? undefined : "sponsored nofollow noopener noreferrer"}
               aria-label={`${platform.name} - ${platform.description}`}
             >
               <img 

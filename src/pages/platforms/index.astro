@@ -10,12 +10,17 @@ const platforms = [
   { slug: "ygn9", name: "Ygn9", url: "/go/p2", img: "/images/platforms/ygn9.jpg", desc: "Ygn9 - မြန်မာ့ထိပ်တန်း အွန်လိုင်းလောင်းကစားပလက်ဖောင်း" },
   { slug: "pya777", name: "Pya777", url: "/go/p", img: "/images/platforms/pya777.jpg", desc: "Pya777 ကာစီနို - အကောင်းဆုံး စလော့ဂိမ်းများ" },
   { slug: "mmk99", name: "Mmk99", url: "/go/p2", img: "/images/platforms/mmk99.jpg", desc: "Mmk99 - မြန်ဆန်သော ငွေသွင်း-ထုတ်မှု" },
-  { slug: "kbz999", name: "Kbz999", url: "/go/p", img: "/images/platforms/kbz999.jpg", desc: "Kbz999 အွန်လိုင်းကာစီနို - ဘောနပ်စများစွာ" },
+  { slug: "kbz999", name: "Kbz999", url: "/go/p", img: "/images/platforms/kbz999.jpg", desc: "Kbz999 slot download Android နှင့် APK safety လမ်းညွှန်" },
   { slug: "mmk123", name: "Mmk123", url: "/go/p2", img: "/images/platforms/mmk123.jpg", desc: "Mmk123 - လူကြိုက်များသော ဂိမ်းများ" },
   { slug: "mmk8", name: "Mmk8", url: "/go/p", img: "/images/platforms/mmk8.jpg", desc: "Mmk8 ကာစီနို - 24/7 ဝန်ဆောင်မှု" },
   { slug: "shwe-casino-99", name: "Shwe Casino 99", url: "/go/p2", img: "/images/platforms/shwe-casino-99.jpg", desc: "Shwe Casino 99 - အကောင်းဆုံး အွန်လိုင်းကာစီနို" },
   { slug: "yz09", name: "YZ09", url: "/go/p", img: "/images/platforms/yz09.jpg", desc: "YZ09 - ယုံကြည်စိတ်ချရသော ကာစီနို ပလက်ဖောင်း" }
 ];
+
+type Platform = (typeof platforms)[number];
+const internalPlatformSlugs = ["yes8", "ygn9", "kbz999"];
+const isInternalPlatform = (slug: string) => internalPlatformSlugs.includes(slug);
+const platformHref = (platform: Platform) => isInternalPlatform(platform.slug) ? `/platforms/${platform.slug}` : platform.url;
 ---
 
 <Layout title={title} description={description}>
@@ -28,7 +33,7 @@ const platforms = [
     <section class="grid" aria-label="platform list">
       {platforms.map((p) => (
         <article class="card">
-          <a class="card-link" href={p.slug === "yes8" || p.slug === "ygn9" ? `/platforms/${p.slug}` : p.url} target={p.slug === "yes8" || p.slug === "ygn9" ? undefined : "_blank"} rel={p.slug === "yes8" || p.slug === "ygn9" ? undefined : "sponsored nofollow noopener noreferrer"} aria-label={`${p.name} platform details`}>
+          <a class="card-link" href={platformHref(p)} target={isInternalPlatform(p.slug) ? undefined : "_blank"} rel={isInternalPlatform(p.slug) ? undefined : "sponsored nofollow noopener noreferrer"} aria-label={`${p.name} platform details`}>
             <img src={p.img} alt={`${p.name} platform`} loading="lazy" />
             <div class="card-body">
               <h2>{p.name}</h2>
