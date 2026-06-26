@@ -59,7 +59,7 @@ export const GET: APIRoute = async () => {
     .join('\n');
 
   const platformUrls = platformSlugs
-    .map((slug) => renderUrlEntry(`/platforms/${slug}`, '0.7', 'weekly', false))
+    .map((slug) => renderUrlEntry(`/platforms/${slug}/`, '0.7', 'weekly', false))
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
