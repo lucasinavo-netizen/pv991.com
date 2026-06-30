@@ -19,6 +19,25 @@ const siteUrl = "https://www.pv991.com";
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-724BTJFFGZ');
+
+    window.addEventListener('click', (event) => {
+      const anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+      if (!anchor) return;
+      const href = anchor.getAttribute('href') || '';
+      if (!href.startsWith('/go/')) return;
+      gtag('event', 'affiliate_click', {
+        event_category: 'affiliate',
+        event_label: href,
+        go_path: href,
+        link_url: new URL(href, window.location.href).href,
+        link_text: (anchor.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 120),
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        site: window.location.hostname.replace(/^www\./, ''),
+        placement: anchor.closest('header') ? 'header' : (anchor.closest('aside') ? 'sidebar' : 'content'),
+        transport_type: 'beacon',
+      });
+    });
   </script>
   
   <!-- Primary Meta Tags -->
