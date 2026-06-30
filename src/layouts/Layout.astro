@@ -29,7 +29,20 @@ const ogImage = "/images/og-image.jpg";
       const href = a.getAttribute('href') || '';
       const isExternal = /^https?:\/\//i.test(href);
       const location = a.closest('header') ? 'header' : (a.closest('aside') ? 'sidebar' : 'content');
-      if (href.startsWith('/platforms/')) {
+      if (href.startsWith('/go/')) {
+        gtag('event', 'affiliate_click', {
+          event_category: 'affiliate',
+          event_label: href,
+          go_path: href,
+          link_url: new URL(href, window.location.href).href,
+          link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 120),
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+          site: window.location.hostname.replace(/^www\./, ''),
+          placement: location,
+          transport_type: 'beacon',
+        });
+      } else if (href.startsWith('/platforms/')) {
         gtag('event', 'platform_internal_click', { platform_path: href, location });
       } else if (isExternal) {
         gtag('event', 'outbound_click', { link_url: href, location });
