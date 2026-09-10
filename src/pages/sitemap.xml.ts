@@ -17,7 +17,8 @@ const staticPages = [
   { path: '/', priority: '1.0', changefreq: 'daily', hreflang: true },
   { path: '/guide', priority: '0.8', changefreq: 'weekly', hreflang: true },
   { path: '/blog/', priority: '0.7', changefreq: 'weekly', hreflang: false },
-  { path: '/platforms/', priority: '0.8', changefreq: 'weekly', hreflang: false }
+  { path: '/platforms/', priority: '0.8', changefreq: 'weekly', hreflang: false },
+  { path: '/vi/', priority: '0.8', changefreq: 'weekly', hreflang: false }
 ];
 
 const getLastMod = () => new Date().toISOString().split('T')[0];
